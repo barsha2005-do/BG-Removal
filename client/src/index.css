@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+*{
+    font-family: Outfit;
+}
+
+.slider{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 100%;
+    background: transparent;
+}
+
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 30px;
+    min-height: 30px;
+    background-image: url(/slide_icon.svg);
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-layer{
+    background-image: url(/bg_layer.png);
+}
+
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background:
+    linear-gradient(0deg ,rgb(0 0 0/50%) 30%,#0000 0 70%,rgb(0 0 0/100%) 0) 50%/8% 100%,
+    linear-gradient(90deg,rgb(0 0 0/25%) 30%,#0000 0 70%,rgb(0 0 0/75% ) 0) 50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+}
+.loader::before,
+.loader::after {
+   content: "";
+   grid-area: 1/1;
+   border-radius: 50%;
+   background: inherit;
+   opacity: 0.915;
+   transform: rotate(30deg);
+}
+.loader::after {
+   opacity: 0.83;
+   transform: rotate(60deg);
+}
+@keyframes l23 {
+  100% {transform: rotate(1turn)}
+}
+
+/* From Uiverse.io by barisdogansutcu */ 
+.button {
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 3px blue;
+  background-color: white
+  (40, 45, 211);
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  letter-spacing: 3px;
+  background-color: hsl(243, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(56, 20, 214) 0px 7px 29px 0px;
+}
+
+.button:active {
+  letter-spacing: 3px;
+  background-color: hsl(244, 80%, 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(50, 24, 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+.button2 {
+  padding: 12px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  transition: all 0.5s ease;
+}
+
+.button2:hover {
+  letter-spacing: 3px;
+  background-color: hsl(216, 80%, 45%);
+  color: hsl(210, 17%, 98%);
+  box-shadow: rgb(20, 101, 214) 0px 7px 29px 0px;
+}
+
+.button2:active {
+  letter-spacing: 3px;
+  background-color: hsl(211, 80%, 48%);
+  color: hsl(210, 11%, 96%);
+  box-shadow: rgb(24, 99, 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
+
